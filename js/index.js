@@ -25,9 +25,12 @@ const renderSuccess = () => {
   $('.options4').text('');
   
   
-  if (score <= 60) {
+  if (score <= 40) {
     $('<span>VERY POOR! You have </span>' + score + '<span> points</span>').appendTo('.question-question');
     $('<img src="https://media.giphy.com/media/5MtOIdkHhxPFu/giphy.gif">').appendTo('.question-options');
+  } else if (score <=70) {
+    $('<span>Hmmmm YOU\'VE TRIED BUT YOU CAN DO BETTER. You have </span>' + score + '<span> points</span>').appendTo('.question-question');
+    $('<img src="https://media.giphy.com/media/26gsetuXxUjaWPLA4/giphy.gif">').appendTo('.question-options');
   } else {
     $('<span>CONGRATS! YOU\'VE DONE WELL! You have </span>' + score + '<span> points</span>').appendTo('.question-question');
     $('<img src="https://media.giphy.com/media/l0MYCn3DDRBBqk6nS/giphy.gif">').appendTo('.question-options');
